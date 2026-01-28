@@ -1,0 +1,172 @@
+:root {
+  --black: #000;
+  --dark: #1C1C1C;
+  --white: #fff;
+  --lime: #A4E000;
+  --gray: #E6E6E6;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background: var(--black);
+  color: var(--white);
+}
+
+h1,h2,h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  background: var(--black);
+  border-bottom: 1px solid #333;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.nav a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,.9), rgba(0,0,0,.3));
+}
+
+.hero-content {
+  position: relative;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 52px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.bg-dark {
+  background: var(--dark);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+.grid-2 {grid-template-columns: repeat(2,1fr);}
+.grid-3 {grid-template-columns: repeat(3,1fr);}
+.grid-4 {grid-template-columns: repeat(4,1fr);}
+
+/* CARDS */
+.card, .plan {
+  background: #111;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+
+.plan.featured {
+  border: 2px solid var(--lime);
+  transform: scale(1.05);
+}
+
+.price {
+  font-size: 32px;
+  color: var(--lime);
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.btn-primary {
+  background: var(--lime);
+  color: black;
+}
+
+.btn-outline {
+  border: 2px solid var(--lime);
+  color: var(--lime);
+}
+
+/* CTA */
+.cta-final {
+  background: var(--lime);
+  color: black;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* FORM */
+.form input, .form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 16px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+/* FOOTER */
+.footer {
+  background: black;
+  padding: 48px 0;
+  text-align: center;
+}
+
+.footer-social img {
+  width: 24px;
+  margin: 8px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .grid-2,.grid-3,.grid-4{
+    grid-template-columns:1fr;
+  }
+  .hero h1{
+    font-size:34px;
+  }
+}
