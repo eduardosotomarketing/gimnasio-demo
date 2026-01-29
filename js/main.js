@@ -1,6 +1,16 @@
-const toggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.nav-menu');
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".nav-menu");
 
-toggle.addEventListener('click', () => {
-  menu.classList.toggle('active');
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+
+  document.querySelectorAll(".nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("active");
+    });
+  });
 });

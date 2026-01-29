@@ -32,14 +32,23 @@ h1, h2, h3 {
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 16px 0;
+  align-items: center; /* 👈 importante */
+  position: relative;
 }
+
 
 .nav a {
   margin-left: 20px;
   color: white;
   text-decoration: none;
+   display: flex;        /* Para centrar verticalmente */
+  align-items: center;
+  height: 48px;         /* Altura fija para alinear */
+  padding: 0 16px;      /* Padding horizontal */
+  margin-top: 0;        /* Elimina margen superior por defecto */
 }
+
+
 
 /* LOGO */
 .logo {
@@ -160,5 +169,61 @@ h1, h2, h3 {
 @media(max-width:768px){
   .autogestion-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* MENU */
+.nav-menu {
+  display: flex;
+   align-items: center; /* Esto alinea todos verticalmente */
+}
+
+/* RESPONSIVE MENU */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--black);
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+    padding: 24px 0;
+    border-top: 1px solid #333;
+    z-index: 1000;
+  }
+
+  .nav-menu a {
+    margin: 16px 0;
+    font-size: 18px;
+  }
+
+  .nav-menu.active {
+    display: flex;
   }
 }
