@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VECTOR GYM – Gimnasio</title>
+  <title>KINETIC GYM – Gimnasio</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans&display=swap" rel="stylesheet">
@@ -14,19 +14,30 @@
 <!-- HEADER -->
 <header class="header">
   <div class="container nav">
-    <div class="logo">
-  <img src="assets/logo.png" alt="Vector Gym Logo">
-  <span class="slogan">TU FUERZA EN MOVIMIENTO</span>
-</div>
 
-    <nav>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Vector Gym Logo">
+      <span class="slogan">TU FUERZA EN MOVIMIENTO</span>
+    </div>
+
+    <!-- BOTÓN HAMBURGUESA -->
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- MENÚ -->
+    <nav class="nav-menu">
       <a href="#planes">Planes</a>
       <a href="#beneficios">Beneficios</a>
-      <a href="#Autogestión">Autogestión</a>
+      <a href="./gestion/autogestion.html">Autogestión</a>
       <a href="#contacto" class="btn btn-primary">Inscribirme</a>
     </nav>
+
   </div>
 </header>
+
 
 <!-- HERO -->
 <section class="hero">
@@ -120,7 +131,7 @@
         <p>
           Entrenamiento dinámico que combina movimientos funcionales, coordinación y trabajo cardiovascular.
         </p>
-        <a href="#" class="class-link">Ver detalles →</a>
+        <a href="./clases/kinetic-flow.html" class="class-link">Ver detalles →</a>
       </div>
 
       <div class="class-card">
@@ -130,7 +141,7 @@
         <p>
           Fortalece la zona media del cuerpo, mejora la postura y potencia tu rendimiento físico general.
         </p>
-        <a href="#" class="class-link">Ver detalles →</a>
+        <a href="./clases/core-Impact.html" class="class-link">Ver detalles →</a>
       </div>
 
       <div class="class-card">
@@ -285,6 +296,6 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>

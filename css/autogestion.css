@@ -1,0 +1,164 @@
+:root {
+  --black: #000;
+  --dark: #1C1C1C;
+  --white: #fff;
+  --lime: #A4E000;
+  --gray: #ccc;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background: var(--black);
+  color: var(--white);
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+.header {
+  background: var(--black);
+  border-bottom: 1px solid #333;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.nav a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo img {
+  height: 48px;
+}
+
+.slogan {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--lime);
+}
+
+/* SECTION */
+.section {
+  padding: 96px 0;
+}
+
+.bg-dark {
+  background: var(--dark);
+}
+
+/* AUTOGESTIÓN */
+.autogestion-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+}
+
+.autogestion-info .subtitle {
+  color: var(--gray);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.autogestion-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.autogestion-info li {
+  margin-bottom: 12px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.autogestion-info li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--lime);
+}
+
+/* LOGIN CARD */
+.autogestion-login {
+  background: #111;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+
+.login-form label {
+  display: block;
+  margin: 16px 0 6px;
+  font-weight: bold;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.btn-primary {
+  background: var(--lime);
+  color: black;
+}
+
+.btn-outline {
+  border: 2px solid var(--lime);
+  color: var(--lime);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.forgot-link {
+  display: block;
+  margin-top: 16px;
+  text-align: center;
+  color: var(--lime);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-home {
+  text-align: center;
+  margin-top: 48px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .autogestion-grid {
+    grid-template-columns: 1fr;
+  }
+}

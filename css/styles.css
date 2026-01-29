@@ -282,3 +282,55 @@ h1,h2,h3 {
   text-decoration: none;
   font-weight: bold;
 }
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* MENÚ MOBILE */
+.nav-menu {
+  display: flex;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 72px;
+    right: 0;
+    background: var(--black);
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+    padding: 24px 0;
+    border-top: 1px solid #333;
+  }
+
+  .nav-menu a {
+    margin: 16px 0;
+    font-size: 18px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
